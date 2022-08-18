@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "project": {
+    "name": "hydrogen"
+  },
+  "api": {
+    "projectId": "f4obnjkf",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/dashboard",
+    "@sanity/desk-tool",
+    "dashboard-widget-netlify"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboard-config.js"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
