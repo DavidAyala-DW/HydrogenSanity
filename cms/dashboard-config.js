@@ -9,10 +9,10 @@ export default {
             options: {
               sites: [
                 {
-                  buildHookId: '62be0e22093a22184965b91f',
+                  buildHookId: '62fe6cd40cb12a069d6a61be',
                   title: 'Website',
-                  name: 'remedy-place',
-                  apiId: '5715d4a4-260e-48ea-8973-ed6d93dfbc0b',
+                  name: 'hydrogen-sanity-david',
+                  apiId: '3fe2af17-5f0e-4c89-b8be-b50245c4e889',
                 },
               ],
             },
