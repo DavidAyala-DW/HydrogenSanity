@@ -29,7 +29,19 @@ export default function Index(props) {
     <div>
       <h1>{props.params.handle}</h1>
       <div>
-          {data.result[0].title}
+
+        {data.result.map( result => {
+
+          const {title} = result;
+
+          return (
+            <p>
+              {title}
+            </p>            
+          )
+
+        })}
+
       </div>
     </div>    
 
