@@ -13,14 +13,15 @@ export default function Index(props) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        query: `*[_type == 'post']`
+        query: `*[_type == 'post']{...}`
       })
     })
 
     const response = request.json();
-    console.log(data);
     return await response;
   });
+
+  console.log(data.result);
 
   // const actualPet = data.some( pet => pet?.name?.toLowerCase() == props?.params?.handle);
 
@@ -28,7 +29,7 @@ export default function Index(props) {
     <div>
       <h1>{props.params.handle}</h1>
       <div>
-        
+          {data.result[0].title}
       </div>
     </div>    
 
